@@ -6,49 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RPG</title>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="jquery-3.3.1.min.js"></script>
     <script src="assets/javascript/game.js"></script>
+
+
 </head>
 
-<body background="assets/images/manhattan.jpg">
+<body style="background-color:#50B2C7;">
+
+
     <div class="jumbotron jumbotron-fluid">
-        <h1> Seinfeld RPG: a game about nothing!</h1>
-        <h4> What's the deal with selecting your character?</h4>
+
+        <h1 id="jb1">
+            <img src="assets/images/Seinfeld_logo.png" class="float-left" alt="Seinfeld_logo" style="width:400px; height:172px;" id="logo"
+            /> RPG: a game about nothing!</h1>
+        <h4 id="jb2"> What's the deal with selecting your character?</h4>
         <h6> choose below:</h6>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="row">
 
-            <div class="col-lg-12" id="charcters">
+            <div class="col-sm-12" id="characters">
 
-                <div class="col-sm-2" id="jerry">
-                    <img src="assets/images/Jerry.png" alt "Jerry Seinfeld" id="jerryimage" style="width: 150px; height: 175px;">
+                <div class="col-sm-2 playable-characters" id="jerry">
+                    <img src="assets/images/Jerry.png" class="center-block" alt "Jerry Seinfeld" id="jerryimage" style="width: 150px; height: 175px;">
                     <p>Jerry Seinfeld</p>
                     <p class="hp">100</p>
                 </div>
 
-                <div class="col-sm-2" id="george">
-                    <img src="assets/images/George.png" alt "George Costanza" id="georgeimage" style="width: 150px; height: 175px;">
+                <div class="col-sm-2 playable-characters" id="george">
+                    <img src="assets/images/George.png" class="center-block" alt "George Costanza" id="georgeimage" style="width: 150px; height: 175px;">
                     <p>George Costanza</p>
                     <p class="hp">120</p>
                 </div>
 
-                <div class="col-sm-2" id="elaine">
-                    <img src="assets/images/Elaine.jpg_large" alt "Elaine Benes" id="elaineimage" style="width: 150px; height: 175px;">
+                <div class="col-sm-2 playable-characters" id="elaine">
+                    <img src="assets/images/Elaine.jpg_large" class="center-block" alt "Elaine Benes" id="elaineimage" style="width: 150px; height: 175px;">
                     <p>Elaine Benes</p>
                     <p class="hp">80</p>
                 </div>
 
-                <div class="col-sm-2" id="kramer">
-                    <img src="assets/images/Kramer.jpg" alt "Cosmo Kramer" id="kramerimage" style="width: 150px; height: 175px;">
+                <div class="col-sm-2 playable-characters" id="kramer">
+                    <img src="assets/images/Kramer.jpg" class="center-block" alt "Cosmo Kramer" id="kramerimage" style="width: 150px; height: 175px;">
                     <p>Cosmo Kramer</p>
                     <p class="hp">120</p>
                 </div>
@@ -56,39 +60,38 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="col-sm-12" id="enemy-available">
+            <h2>Enemies Available to Attack</h2>
+        </div>
+    </div>
 
-            <div class="col-sm-12" id="player-character">
-                <h2>Your Character</h2>
-            </div>
+    <div class="row">
+        <div class="col-sm-2" id="player-character">
+            <h2>Your Character</h2>
         </div>
 
-        <div class="row">
-
-            <div class="col-sm-12" id="enemy-available">
-                <h2>Enemies Available to Attack</h2>
-            </div>
+        <div class="col-sm-4" id="fight">
+            <button type="button" class="btn btn-lg btn-danger">Attack</button>
+            <p class="combat log"></p>
         </div>
 
-        <div class="row">
-            <div class="col-sm-12" id="fight">
-                <button type="button" class="btn btn-danger">Attack</button>
-            </div>
+        <div class="col-sm-4" id="nonplayer-character">
+            <h2> Defender</h2>
         </div>
-
-        <div class="row">
-            <div class="col-sm-12" id="defender">
-                <h2> Defender</h2>
-            </div>
-        </div>
+    </div>
 
 
-        <div class="row">
-            <div class="col-sm-12" id="log">
-                <div id="combat log"></div>
-                <button type="button" class="btn btn-warning">Reset</button>
-            </div>
-        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-sm-12" id="reset">
+        <button type="button" class="btn btn-warning">Reset</button>
+    </div>
+    </div>
 
 
 
@@ -102,7 +105,7 @@
 
 
 
-
+    <script src="assets/javascript/game.js"></script>
 
 
 
